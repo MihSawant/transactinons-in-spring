@@ -35,7 +35,7 @@ public class TransferService {
         accountRepository.changeAmount(senderId, senderAmount);
         accountRepository.changeAmount(receiverId, receiverAmount);
 
-        throw new RuntimeException("Transaction Fails");
+//        throw new RuntimeException("Transaction Fails");
     }
 
     public List<Account> getAllAccounts(){
