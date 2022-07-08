@@ -14,12 +14,14 @@ public interface AccountRepository extends CrudRepository<Account, Integer> {
 
 
     @Query("SELECT * FROM account WHERE id = :id")
-    public Account findAccountById(int id);
+    Account findAccountById(int id);
 
     @Modifying
     @Query("UPDATE account SET amount = :amount WHERE id = :id")
-    public void changeAmount(int id, BigDecimal amount);
+    void changeAmount(int id, BigDecimal amount);
 
     @Query("SELECT * FROM account")
-    public List<Account> findAllAccounts();
+    List<Account> findAllAccounts();
+
+
 }

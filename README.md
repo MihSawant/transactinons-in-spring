@@ -12,6 +12,9 @@ transaction operations with _@Transactional_ annotation, so it will treat the me
 Behind the scenes Spring configures an Aspect that will intercept the methods and if the method executes peacefully then
 it commits the transaction and if a **Runtime-Exception** is _thrown_ then it will rollback the transaction.
 
+Using the Spring-Data support for creating and managing the Repositories and providing their implementations, In 
+this case using the CrudRepository.
+
     But the important thing to note is that Runtime exception needs to be thrown by the method or else
     it will not be visible by the aspect outside and it will still commit the operation.
     if the method handles the exeception using try catch block then it will be catched by method, but 
