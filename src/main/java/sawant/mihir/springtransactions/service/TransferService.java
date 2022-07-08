@@ -19,8 +19,8 @@ public class TransferService {
 
     @Transactional
     public void transferMoney(int senderId, int receiverId, BigDecimal amount){
-        var sender = accountRepository.findById(senderId);
-        var receiver = accountRepository.findById(receiverId);
+        var sender = accountRepository.findAccountById(senderId);
+        var receiver = accountRepository.findAccountById(receiverId);
 
         var senderBalance = sender.amount();
         var receiverBalance = receiver.amount();
