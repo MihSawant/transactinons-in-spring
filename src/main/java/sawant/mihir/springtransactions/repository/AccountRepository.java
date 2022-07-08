@@ -13,8 +13,6 @@ import java.util.List;
 public interface AccountRepository extends CrudRepository<Account, Integer> {
 
 
-    @Query("SELECT * FROM account WHERE id = :id")
-    Account findAccountById(int id);
 
     @Modifying
     @Query("UPDATE account SET amount = :amount WHERE id = :id")
